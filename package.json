@@ -6,7 +6,12 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint"
+		"lint": "eslint",
+		"db:create": "tsx scripts/db.ts",
+		"db:push": "drizzle-kit push",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "pnpm run db:create && drizzle-kit migrate",
+		"db:studio": "drizzle-kit studio"
 	},
 	"dependencies": {
 		"@t3-oss/env-nextjs": "^0.13.8",
@@ -27,6 +32,7 @@
 		"eslint": "^9",
 		"eslint-config-next": "16.0.1",
 		"tailwindcss": "^4",
+		"tsx": "^4.20.6",
 		"typescript": "^5"
 	}
 }

@@ -15,8 +15,8 @@ export const env = createEnv({
 				value;
 
 			return {
-				...rest,
-				DATABASE_URL: `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`,
+				...value,
+				DATABASE_URL: `postgresql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`,
 			};
 		});
 	},
